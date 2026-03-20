@@ -5,7 +5,7 @@ async function getRate(fromCurrency, toCurrency) {
     let url = `${BASE_URL}/${fromCurrency().toLowerCase()}.json`;
     let response = await fetch(url);
     let data = await response.json();
-    let rate = data[fromCurrency][toCurrency];
+    let rate = data[fromCurrency().toLowerCase()][toCurrency().toLowerCase()];
     console.log(rate);
 }
 
