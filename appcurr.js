@@ -2,10 +2,10 @@ const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/
 
 
 async function getRate(fromCurrency, toCurrency) {
-    let url = `${BASE_URL}/${fromCurrency().toLowerCase()}.json`;
+    let url = `${BASE_URL}/${fromCurrency.toLowerCase()}.json`;
     let response = await fetch(url);
     let data = await response.json();
-    let rate = data[fromCurrency().toLowerCase()][toCurrency().toLowerCase()];
+    let rate = data[fromCurrency.toLowerCase()][toCurrency.toLowerCase()];
     console.log(rate);
 }
 
