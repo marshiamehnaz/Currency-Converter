@@ -1,15 +1,6 @@
 const BASE_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
 
-async function getRate(fromCurrency, toCurrency) {
-    let url = `${BASE_URL}/${fromCurrency.toLowerCase()}.json`;
-    let response = await fetch(url);
-    let data = await response.json();
-    let rate = data[fromCurrency.toLowerCase()][toCurrency.toLowerCase()];
-    console.log(rate);
-}
-
-
 const dropdowns =document.querySelectorAll(".dropdown select");
 const btn =document.querySelector("form button");
 const fromCurr =document.querySelector(".from select");
